@@ -1,0 +1,10 @@
+N1 = 40000;
+N2 = N1+1;
+K = 38;
+Xtrain = X_75(1:N1,:);
+Xtest = X_75(N2:(2*N1),:);
+ytrain = Y(1:N1,:);
+ytest = Y(N2:(2*N1),:);
+model = knnFit(Xtrain, ytrain, K);
+[yhat, yprob] = knnPredict(model, Xtest);
+mean(ytest~=yhat)
