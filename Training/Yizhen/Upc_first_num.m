@@ -6,6 +6,25 @@ for i=1:1:N1
 end
 disp('finished')
 %%
+N4 = size(IG_new,2);
+N5 = 10;
+max_per_row = zeros(N1,1);
+indtotal = [];
+for i=1:1:N4
+    i
+    temp = sort(IG_new(:,i),'descend');
+    for j=1:1:N1
+        if  isnan(temp(j))
+        else
+            j = j+N5-1;
+            break;
+        end
+    end
+    indtemp = find(IG_new(:,i)>=temp(j),N5);
+    indtotal = [indtotal;indtemp];
+end
+disp('finished')
+%%
 N2 = 5000;
 order_de = sort(max_per_row,'descend');
 ind = find(max_per_row>=order_de(N2),N2);

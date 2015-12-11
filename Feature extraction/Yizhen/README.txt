@@ -1,8 +1,10 @@
-Introduction for Dec.2
+commit_3:
 
 FUNCTION:
-feature_FinelineNumber: extract Finlinenumber feature
+feature_FinelineNumber: extract Finlinenumber feature from the training data.
+feature_Upc: extract Upc feature from the training dat
 MatchingMatrix_75feature: computing the correct rate for train samples with 75 features
+IG: calculate the IG information for the Upc features for feature selection
 
 MAT:
 order_for_94247: the random order for the raw data, first 60000 is used as train, the rest is used as test.
